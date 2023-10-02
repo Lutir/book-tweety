@@ -3,10 +3,18 @@ from chatgpt.constants import ChatGPTConstants as Constants
 
 class ChatGPTAPI:
     def __init__(self, api_key):
+        """
+        Initialize the ChatGPT client with credentials.
+
+        :param api_key: ChatGPT API Key
+        """
         self.api_key = api_key
         self.engine = "gpt-3.5-turbo"
     
-    def generate_response(self, prompt):
+    def generate_response(self):
+        """
+        Generates a response via completion's API for the prompt passed
+        """
         openai.api_key = self.api_key
         
         response = openai.ChatCompletion.create(

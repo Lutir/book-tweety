@@ -1,9 +1,26 @@
 from twitter.twitter_api import TwitterAPI
 from chatgpt.chatgpt_api import ChatGPTAPI
 import configparser
+import random
+import time
+
+def lambda_handler(event, context):
+    try:
+        # Generate a random sleep duration between 1 and 5 minutes (60 to 300 seconds)
+        sleep_duration = random.randint(60, 300)
+
+        # Sleep for the generated duration
+        time.sleep(sleep_duration)
+        generate_tweet()
+
+    except Exception as e:
+        return {
+            'statusCode': 200,
+            'body': 'Lambda executed'
+        }
 
 
-if __name__ == "__main__":
+def generate_tweet():
     # Create a ConfigParser object
     twitter_config = configparser.ConfigParser()
     chatgpt_config = configparser.ConfigParser()
