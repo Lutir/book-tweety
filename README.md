@@ -14,7 +14,7 @@ Welcome to the Book Insight Generator! This fun and educational project utilizes
 3. **Tweet Creation**: It crafts a concise and captivating tweet based on the generated insights.
 4. **Tweet to Twitter**: Your Lambda function tweets the insight to your Twitter account, delighting your followers with literary gems every day.
 
-### Architecture
+## Architecture
 
 <!-- Replace with your project's logo or banner -->
 <p align="center">
@@ -35,14 +35,16 @@ Welcome to the Book Insight Generator! This fun and educational project utilizes
 
    ```bash
    git clone https://github.com/your-username/your-project.git
-2. Configure your AWS Lambda function and set up EventBridge rules to trigger it at your desired intervals (e.g., daily).
-
-3. Configure your Twitter API keys.
-4. Deploy the Lambda function.
+2. Configure your Twitter and OpenAI keys.
+   - OpenAI API Docs: https://platform.openai.com/docs/introduction
+   - Twitter API Docs: https://developer.twitter.com/en/docs/twitter-api
+3. In the projects, we have configured the API keys to be present in config files - Eg: `chatgpt_config.ini`, `twitter_config.ini`. Feel free to follow the same structure.
+4. Configure your AWS Lambda function and set up EventBridge rules to trigger it at your desired intervals (e.g., daily).
+5. Once you have setup the Lambda function, Deploy the Lambda function!
 
 ### Usage
 
-1. Invoke the Lambda function with the book and author details as input.
+1. Invoke the Lambda function with the book and author details as input. The inputs are present in the constants of the chat_gpt module. (TODO: Move it to somewhere more accessible )
 2. Sit back and watch as your Twitter account comes alive with daily book insights!
 
 ### Features
@@ -55,6 +57,9 @@ Welcome to the Book Insight Generator! This fun and educational project utilizes
 ### Contributing
 
 If you'd like to improve this project or add new features, feel free to submit pull requests!
+
+### Links
+https://twitter.com/PlotExplorers
 
 
 
