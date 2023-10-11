@@ -16,12 +16,12 @@ class ChatGPTAPI:
         Generates a response via completion's API for the prompt passed
         """
         openai.api_key = self.api_key
-        
+        constants = Constants()
         response = openai.ChatCompletion.create(
             model=self.engine,
             messages = [
-                {"role": "system", "content": f"{Constants.SYSTEM_ROLE_MSG}"},
-                {"role": "user", "content": f"{Constants.USER_ROLE_MSG}"},
+                {"role": "system", "content": f"{constants.get_system_role_prompt()}"},
+                {"role": "user", "content": f"{constants.get_user_role_prompt()}"},
             ]
         )
         return response['choices'][0]['message']['content'].strip('"')       

@@ -1,0 +1,86 @@
+[
+    {
+        "book_name": "The 7 Habits of Highly Effective People",
+        "author": "Stephen R. Covey"
+    },
+    {
+        "book_name": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie"
+    },
+    {
+        "book_name": "Atomic Habits",
+        "author": "James Clear"
+    },
+    {
+        "book_name": "Awaken the Giant Within",
+        "author": "Tony Robbins"
+    },
+    {
+        "book_name": "The Power of Habit",
+        "author": "Charles Duhigg"
+    },
+    {
+        "book_name": "Daring Greatly",
+        "author": "Brené Brown"
+    },
+    {
+        "book_name": "Start with Why",
+        "author": "Simon Sinek"
+    },
+    {
+        "book_name": "The Subtle Art of Not Giving a F*ck",
+        "author": "Mark Manson"
+    },
+    {
+        "book_name": "Think and Grow Rich",
+        "author": "Napoleon Hill"
+    },
+    {
+        "book_name": "Deep Work",
+        "author": "Cal Newport"
+    },
+    {
+        "book_name": "Mindset: The New Psychology of Success",
+        "author": "Carol S. Dweck"
+    },
+    {
+        "book_name": "The Miracle Morning",
+        "author": "Hal Elrod"
+    },
+    {
+        "book_name": "Grit: The Power of Passion and Perseverance",
+        "author": "Angela Duckworth"
+    },
+    {
+        "book_name": "Lean In: Women, Work, and the Will to Lead",
+        "author": "Sheryl Sandberg"
+    },
+    {
+        "book_name": "You Are a Badass: How to Stop Doubting Your Greatness and Start Living an Awesome Life",
+        "author": "Jen Sincero"
+    },
+    {
+        "book_name": "Man's Search for Meaning",
+        "author": "Viktor E. Frankl"
+    },
+    {
+        "book_name": "The Lean Startup",
+        "author": "Eric Ries"
+    },
+    {
+        "book_name": "Outliers: The Story of Success",
+        "author": "Malcolm Gladwell"
+    },
+    {
+        "book_name": "The 5 Second Rule: Transform your Life, Work, and Confidence with Everyday Courage",
+        "author": "Mel Robbins"
+    },
+    {
+        "book_name": "Mind Hacking: How to Change Your Mind for Good in 21 Days",
+        "author": "Sir John Hargrave"
+    },
+    {
+        "book_name": "The One Thing: The Surprisingly Simple Truth Behind Extraordinary Results",
+        "author": "Gary Keller"
+    }    
+]

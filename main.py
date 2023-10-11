@@ -5,8 +5,12 @@ import random
 import time
 
 def lambda_handler(event, context):
+    """
+    Lambda trigger that gets triggered by an EventBridge rule to send a tweet
+    """
     try:
         # Generate a random sleep duration between 1 and 5 minutes (60 to 300 seconds)
+        # We are sleeping to add a bit of randomness between our tweet times everyday.
         sleep_duration = random.randint(60, 300)
 
         # Sleep for the generated duration
@@ -16,11 +20,14 @@ def lambda_handler(event, context):
     except Exception as e:
         return {
             'statusCode': 200,
-            'body': 'Lambda executed'
+            'body': 'Tweet Successfull!'
         }
 
 
 def generate_tweet():
+    """
+    Function that initializes clients and tweet's a ChatGPT generated Tweet.
+    """
     # Create a ConfigParser object
     twitter_config = configparser.ConfigParser()
     chatgpt_config = configparser.ConfigParser()
@@ -30,7 +37,7 @@ def generate_tweet():
     chatgpt_config.read('chatgpt_config.ini')
 
     chatgpt_client = ChatGPTAPI(api_key=chatgpt_config["API"]["api_key"])
-    gpt_response = chatgpt_client.generate_response("Aloha")
+    gpt_response = chatgpt_client.generate_response()
 
     twitter_client = TwitterAPI(
         consumer_key=twitter_config["API"]["consumer_key"],
@@ -41,4 +48,9 @@ def generate_tweet():
 
     twitter_client.create_tweet(gpt_response)
 
+def main():
+    generate_tweet()
+
+if __name__ == '__main__':
+    main()
 
